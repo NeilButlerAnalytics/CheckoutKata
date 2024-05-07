@@ -5,8 +5,14 @@ namespace SupermarketCheckout.Tests
 {
     public class CheckoutTests
     {
-        // THIS WILL INITIALLY FAIL - BUILD ERRORS EXPECTED
+        // LETS CREATE OUR CHECKOUT OBJECT
+        public CheckoutTests()
+        {
 
+            checkout = new Checkout();
+        }
+
+        Checkout checkout;
         [Fact]
         public void true_FindPriceOfItemA()
         {
