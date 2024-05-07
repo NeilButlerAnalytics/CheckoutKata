@@ -5,10 +5,14 @@ namespace SupermarketCheckout.Tests
 {
     public class CheckoutTests
     {
-        // LETS CREATE OUR CHECKOUT OBJECT
         public CheckoutTests()
         {
-
+            // INCLUDE OUR NEW PRODUCTCATALOG AND SET THE PRICES OF OUR PRODUCTS
+            var catalog = new ProductCatalog()
+                    .UpdateProductPrice("A", 50)
+                    .UpdateProductPrice("B", 30)
+                    .UpdateProductPrice("C", 20)
+                    .UpdateProductPrice("D", 15);
             checkout = new Checkout();
         }
 
