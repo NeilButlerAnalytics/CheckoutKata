@@ -14,6 +14,18 @@ namespace SupermarketCheckout
             return this;
         }
 
+        public ProductCatalog RemoveProduct(string sku)
+        {
+            this.catalog.RemoveAll(x => x.Sku == sku);
+            return this;
+        }
+
+        public int GetPriceForProduct(string sku)
+        {
+            var product = this.catalog.Where(x => x.Sku == sku).FirstOrDefault();
+            if (product == null) throw new UnknownSkuException(sku);
+            return product.Price;
+        }
     }
 
    

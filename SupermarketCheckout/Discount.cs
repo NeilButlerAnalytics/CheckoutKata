@@ -20,7 +20,6 @@ namespace SupermarketCheckout
     public class Discounts
     {
         private List<Discount> discounts = new List<Discount>();
-        // UPDATE THE DISCOUNTS CLASS TO PERFORM CALCULATIONS FOR DISCOUNTS
         public Discounts DiscountProduct(string sku, int numberOfItems, int priceOfPackage)
         {
             this.discounts.RemoveAll(x => x.Sku == sku);

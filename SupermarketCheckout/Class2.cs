@@ -1,10 +1,14 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace SupermarketCheckout
 {
-    public class Checkout
+    public class Checkout2
     {
-        public Checkout(ProductCatalog catalog, Discounts discounts)
+        public Checkout2(ProductCatalog catalog, Discounts discounts)
         {
             this.Catalog = catalog;
             this.Discounts = discounts;
@@ -15,6 +19,10 @@ namespace SupermarketCheckout
         private readonly Discounts Discounts;
         private readonly Dictionary<string, int> ScannedItems;
 
+        /// <summary>
+        /// scan an item  based on sku
+        /// </summary>
+        /// <param name="sku">stock keeping unit</param>
         public void Scan(string sku, int times = 1)
         {
             if (ScannedItems.ContainsKey(sku))
