@@ -1,2 +1,2 @@
 # CheckoutKata
-Test Focussed Checkout Kata
+Test Driven Development for Checkout Kata
