@@ -7,12 +7,16 @@ namespace SupermarketCheckout.Tests
     {
         public CheckoutTests()
         {
-            // INCLUDE OUR NEW PRODUCTCATALOG AND SET THE PRICES OF OUR PRODUCTS
+
             var catalog = new ProductCatalog()
                     .UpdateProductPrice("A", 50)
                     .UpdateProductPrice("B", 30)
                     .UpdateProductPrice("C", 20)
                     .UpdateProductPrice("D", 15);
+            // INCLUDE OUR NEW DISCOUNTS CATALOG AND SET THE PRICES OF OUR DISCOUNTS
+            var discounts = new Discounts()
+                    .DiscountProduct("A", 3, 130)
+                    .DiscountProduct("B", 2, 45);
             checkout = new Checkout();
         }
 
